@@ -4,20 +4,11 @@
 <body>
   <h1>Zettele, the game</h1>
   
-  <script> 
-// Requiring fs module in which 
-// writeFile function is defined. 
-const fs = require('fs') 
+<?php
+$fp = fopen('test.txt', 'w');
+fwrite($fp, 'Cats chase mice');
+fclose($fp);
+?>
   
-// Data which will write in a file. 
-let data = "Learning how to write in a file."
-  
-// Write data in 'Output.txt' . 
-fs.writeFile('Output.txt', data, (err) => { 
-      
-    // In case of a error throw err. 
-    if (err) throw err; 
-}) 
-</script> 
 </body>
 </html>
